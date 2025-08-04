@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <style>
+    body {
+      background-color: #2c2c2c;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    h1.top-products {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+    .categories p {
+      cursor: pointer;
+      padding: 6px 14px;
+      background-color: #444;
+      color: white;
+      border-radius: 20px;
+      user-select: none;
+      transition: background-color 0.3s ease;
+      margin: 5px;
+    }
+    .categories p:hover,
+    .categories p.active {
+      background-color: #ff4d4d;
+    }
+    .card {
+      background-color: #2c2c2c;
+      color: white;
+      border: 1px solid #555;
+    }
+    .rating i {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <h1 class="top-products">Top Products</h1>
+  <div class="categories d-flex flex-wrap justify-content-center gap-2 mb-4">
+    <p class="active">All</p>
+    <p>Headphones</p>
+    <p>Earbuds</p>
+    <p>Earphones</p>
+    <p>Neckbands</p>
+  </div>
+
+  
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/jbl660nc-1.png" class="card-img-top" alt="JBL Live 660NC" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <h5 class="card-title">JBL Live 660NC</h5>
+            <p class="card-text">Wireless Over-Ear NC Headphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹9,999</span> <del class="text-muted">₹14,999</del></p>
+            <a href="./product description.html" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/boat518-1.png" class="card-img-top" alt="boat" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <h5 class="card-title">boAtRockerz 518</h5>
+            <p class="card-text">On-Ear Wireless Headphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹1,299</span> <del class="text-muted">₹3,990</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/boat131-1.png" class="card-img-top" alt="boat" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <h5 class="card-title">boAt Airpodes 131</h5>
+            <p class="card-text">Wireless In-Ear Earbuds</p>
+            <hr />
+            <p><span class="h5 text-white">₹1,099</span> <del class="text-muted">₹2,990</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/boat110-1.png" class="card-img-top" alt="boat" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            
+            </div>
+            <h5 class="card-title">boAt BassHeads 110</h5>
+            <p class="card-text">In-Ear wired Earphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹449</span> <del class="text-muted">₹999</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/boat410-1.png" class="card-img-top" alt="boar410" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <h5 class="card-title">boAt Rockerz 410</h5>
+            <p class="card-text">Bluetooth & Wired On-Ear<br> Headphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹1,599</span> <del class="text-muted">₹2,990</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/jbl200bt-1.png" class="card-img-top" alt="JBL " />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              
+            </div>
+            <h5 class="card-title">JBL Live 200BT</h5>
+            <p class="card-text">In-Ear Wireless Neckbands</p>
+            <hr />
+            <p><span class="h5 text-white">₹3,699</span> <del class="text-muted">₹5,299</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/sonyXb910n-1.png" class="card-img-top" alt="sonyXb910n-1" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              
+            </div>
+            <h5 class="card-title">Sony WH-XB910N</h5>
+            <p class="card-text">Wireless Over-Ear <br>Headphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹13,489</span> <del class="text-muted">₹19,990</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/jbl660nc-1.png" class="card-img-top" alt="JBL 660NC" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              
+            </div>
+            <h5 class="card-title">JBL Tune 760NC</h5>
+            <p class="card-text">Wireless Over-Ear NC Headphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹5,999</span> <del class="text-muted">₹7,999</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/boat255r-1.png" class="card-img-top" alt="boat" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <h5 class="card-title">boAt Rockerz 255</h5>
+            <p class="card-text">In-Ear wireless Neckbands</p>
+            <hr />
+            <p><span class="h5 text-white">₹899</span> <del class="text-muted">₹2,990</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/jbl100-1.png" class="card-img-top" alt="jbl100-1" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            
+            </div>
+            <h5 class="card-title">JBL Wave 100</h5>
+            <p class="card-text">In-Ear Truly Wireless Earbuds</p>
+            <hr />
+            <p><span class="h5 text-white">₹2,999</span> <del class="text-muted">₹6,999</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/sony1000xm4-1.png" class="card-img-top" alt="sony1000xm4-1" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <h5 class="card-title">Sony WF-1000XM4</h5>
+            <p class="card-text">Wireless In-Ear NC Headphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹19,990</span> <del class="text-muted">₹24,990</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <p class=" d-flex align-items-center text-align-center h-100 justify-content-center ">Browse All<br> Products →</p>
+      </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

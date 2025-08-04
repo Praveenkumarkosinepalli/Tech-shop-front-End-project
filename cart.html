@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <style>
+    body {
+      background-color: #2c2c2c;
+      color: white;
+    }
+    .cart-item {
+      background-color: #2c2c2c;
+      color: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #444;
+    }
+    .cart-item:hover {
+      background-color: #3a3a3a;
+    }
+    .cart-img {
+      height: 120px;
+      object-fit: contain;
+    }
+    .quantity-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 20px;
+      padding: 0;
+    }
+    .summary-box {
+      background-color: #2c2c2c;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      position: sticky;
+      top: 20px;
+      border: 1px solid #444;
+    }
+    .text-green {
+      color: #28a745;
+    }
+    hr {
+      border-top: 1px solid #555;
+    }
+
+    .cart-scroll-container {
+      max-height: 80vh;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+    .cart-scroll-container::-webkit-scrollbar {
+      width: 8px;
+    }
+    .cart-scroll-container::-webkit-scrollbar-track {
+      background: #1c1c1c;
+    }
+    .cart-scroll-container::-webkit-scrollbar-thumb {
+      background-color: #555;
+      border-radius: 10px;
+    }
+
+    .cart-item span.px-3 {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 6px 12px;
+      display: inline-block;
+      min-width: 40px;
+      text-align: center;
+      background-color: #1c1c1c;
+      color: #dc3545; 
+    }
+    .footer{
+      background-color:rgb(17, 16, 16);
+    }
+    .form-control{
+      background-color:rgb(22, 21, 21);
+    
+    }
+
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c2c2c;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="./tech-shop.html">Tech-Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item me-3"><a class="nav-link" href="#"><i class="bi bi-search"></i></a></li>
+        <li class="nav-item me-3"><a class="nav-link" href=""><i class="bi bi-cart"></i></a></li>
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="personDropdown" role="button" data-bs-toggle="dropdown">
+            <i class="bi bi-person"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end text-white" style="background-color: #3a3a3a; padding: 1rem; width: 300px; border-radius: 10px; border: 1px solid #555;">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#signin">Sign In</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#signup">Sign Up</button></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="signin">
+                <form>
+                  <input type="email" class="form-control mb-2" placeholder="Email" />
+                  <input type="password" class="form-control mb-2" placeholder="Password" />
+                  <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="signup">
+                <form>
+                  <input type="text" class="form-control mb-2" placeholder="Username" />
+                  <input type="email" class="form-control mb-2" placeholder="Email" />
+                  <input type="password" class="form-control mb-2" placeholder="Password" />
+                  <input type="password" class="form-control mb-2" placeholder="Confirm Password" />
+                  <button type="submit" class="btn btn-danger w-100">Sign Up</button>
+                </form>
+              </div>
+            </div>
+            <div class="text-center my-2">or login with</div>
+            <div class="d-flex justify-content-around">
+              <button class="btn btn-primary btn-sm">Facebook</button>
+              <button class="btn btn-danger btn-sm">Google</button>
+              <button class="btn btn-primary btn-sm">Twitter</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <h2 class="mb-4">🛒 Your Cart</h2>
+  <div class="row">
+    
+    <div class="col-md-8 cart-scroll-container">
+  
+      <div class="cart-item">
+        <div class="d-flex flex-wrap align-items-center">
+          <img src="./images/jbl660nc-1.png" alt="JBL 660NC" class="cart-img me-4">
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="mb-2">JBL Live 660NC Wireless Over-Ear NC <br>Headphones</h5>
+              <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+            </div>
+            <p><strong>₹9,999</strong> <del class="text-muted ms-2">₹14,999</del></p>
+            <div class="d-flex align-items-center gap-2">
+              <button class="btn btn-outline-secondary quantity-btn">-</button>
+              <span class="px-3">1</span>
+              <button class="btn btn-outline-secondary quantity-btn">+</button>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="cart-item">
+        <div class="d-flex flex-wrap align-items-center">
+          <img src="./images/boat518-1.png" alt="boAt Rockerz 518" class="cart-img me-4">
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="mb-2">boAt Rockerz 518 On-Ear Wireless <br>Headphones</h5>
+              <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+            </div>
+            <p><strong>₹1,299</strong> <del class="text-muted ms-2">₹3,990</del></p>
+            <div class="d-flex align-items-center gap-2">
+              <button class="btn btn-outline-secondary quantity-btn">-</button>
+              <span class="px-3">1</span>
+              <button class="btn btn-outline-secondary quantity-btn">+</button>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="cart-item">
+        <div class="d-flex flex-wrap align-items-center">
+          <img src="./images/boat131-1.png" alt="boAt Airdopes 131" class="cart-img me-4">
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="mb-2">boAt Airdopes 131 Wireless In-Ear <br>Earbuds</h5>
+              <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+            </div>
+            <p><strong>₹1,099</strong> <del class="text-muted ms-2">₹2,990</del></p>
+            <div class="d-flex align-items-center gap-2">
+              <button class="btn btn-outline-secondary quantity-btn">-</button>
+              <span class="px-3">1</span>
+              <button class="btn btn-outline-secondary quantity-btn">+</button>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="cart-item">
+        <div class="d-flex flex-wrap align-items-center">
+          <img src="./images/jbl200bt-1.png" alt="JBL Live 200BT" class="cart-img me-4">
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="mb-2">JBL Live 200BT In-Ear Wireless <br>Neckbands</h5>
+              <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+            </div>
+            <p><strong>₹1,099</strong> <del class="text-muted ms-2">₹2,990</del></p>
+            <div class="d-flex align-items-center gap-2">
+              <button class="btn btn-outline-secondary quantity-btn">-</button>
+              <span class="px-3">1</span>
+              <button class="btn btn-outline-secondary quantity-btn">+</button>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="summary-box">
+        <h4>Order Summary (4 items)</h4>
+        <div class="d-flex justify-content-between">
+          <p>Original Price:</p>
+          <strong>₹22,978</strong>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p>Discount:</p>
+          <strong class="text-green">-₹10,132</strong>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p>Delivery:</p>
+          <strong class="text-green">Free</strong>
+        </div>
+        <hr />
+        <div class="d-flex justify-content-between fs-5">
+          <strong>Total:</strong>
+          <strong>₹12,846</strong>
+        </div>
+        <div class="text-end mt-4">
+          <button class="btn btn-danger w-100">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<footer class="footer bg-black py-5 mt-5">
+  <div class="container text-white ">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5>Tech-Shop</h5>
+        <p class="text-white-75">Subscribe to our Email alerts to receive<br>early discount offers, and new products<br>info.</p>
+        <input type="email" class="form-control text-align-center mb-2" placeholder="Email Address*" />
+        <button class="btn btn-danger">Subscribe</button>
+      </div>
+
+      <div class="col-md-2 mb-4">
+        <h5>Help</h5>
+        <ul class="list-unstyled text-white-75">
+          <li>FAQs</li>
+          <li>Track Order</li>
+          <li>Cancel Order</li>
+          <li>Return Order</li>
+          <li>Warranty Info</li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <h5>Policies</h5>
+        <ul class="list-unstyled text-white-75">
+          <li>Return Policy</li>
+          <li>Security</li>
+          <li>Sitemap</li>
+          <li>Privacy Policy</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <h5>Company</h5>
+        <ul class="list-unstyled text-white-75">
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Service Center</li>
+          <li>Careers</li>
+          <li>Affiliates</li>
+        </ul>
+      </div>
+    </div>
+  </div><br>
+  <hr>
+  
+  <div class="container text-white">
+      <div class="d-flex justify-content-between flex-wrap align-items-center">
+        <div class="text-white-50">2025 | All Rights Reserved</div>
+        <div class="d-flex gap-3 mt-3 mt-md-0">
+          <a href="#"><i class="bi bi-facebook fs-4 text-white"></i></a>
+          <a href="#"><i class="bi bi-twitter fs-4 text-white"></i></a>
+          <a href="#"><i class="bi bi-instagram fs-4 text-white"></i></a>
+          <a href="#"><i class="bi bi-linkedin fs-4 text-white"></i></a>
+          <a href="#top"><button class="btn btn-danger btn-sm"><i class="bi bi-chevron-up"></i></button></a>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

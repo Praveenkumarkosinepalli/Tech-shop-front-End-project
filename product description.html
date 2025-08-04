@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Description - JBL 660NC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <style>
+    body {
+      background-color: #2c2c2c;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+.container-card{
+  text-align: center;
+  justify-content: center;
+}
+    .thumbnail-img {
+      height: 100px;
+      border: 2px solid #555;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+    .thumbnail {
+      height: 100px;
+      border: 2px solid white;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+
+    .main-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .rating i {
+      color: red;
+    }
+
+    .price {
+      font-size: 1.6rem;
+    }
+
+    .old-price {
+      color: #888;
+      text-decoration: line-through;
+    }
+
+    .save {
+      color: #28a745;
+    }
+
+    .badge-stock {
+      background-color: #28a745;
+      font-size: 0.9rem;
+      padding: 6px 10px;
+      border-radius: 20px;
+    }
+
+    .offers {
+      background-color: #2c2c2c;
+      border: 2px solid #555;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .form-control{
+      background-color:rgb(22, 21, 21);
+    
+    }
+
+    .btn-cart {
+      width: auto;
+      padding: 8px 30px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .categories p {
+      cursor: pointer;
+      padding: 15px 25px;
+      background-color: #444;
+      color: white;
+      user-select: none;
+      transition: background-color 0.3s ease;
+      margin: 5px;}
+      
+      .categories p:hover,
+    .categories p.active {
+      background-color: #ff4d4d;
+    }
+    
+    @media (max-width: 768px) {
+      .product-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .thumbnail-col {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .thumbnail-img {
+        width: 80px;
+        margin: 5px;
+      }
+
+      .btn-cart {
+        width: 100%;
+      }
+    }
+    .row div strong {
+    display: inline-block;
+    min-width: 200px;
+    min-height: 50px;
+}
+.card {
+      background-color: #2c2c2c;
+      color: white;
+      border: 1px solid #555;
+    }
+    .rating i {
+      color: red;
+    }
+    .advantages i {
+      margin-right: 10px;
+    }
+    .advantages .adv-item {
+      flex: 1;
+      min-width: 200px;
+    }
+    .footer{
+      background-color: rgb(22, 21, 21);
+    }
+    .card-img-top{
+      padding-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(29, 27, 27)">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="./tech-shop.html">Tech-Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item me-3"><a class="nav-link" href="#"><i class="bi bi-search"></i></a></li>
+        <li class="nav-item me-3"><a class="nav-link" href="./cart.html"><i class="bi bi-cart"></i></a></li>
+        <li class="nav-item me-3"><a class="nav-link" href="#"><i class="bi bi-person"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-5">
+  <div class="d-flex product-layout gap-4">
+    
+    <div class="d-flex flex-column thumbnail-col">
+      <img src="./images/jbl660nc-1.png" class="thumbnail" alt="Thumbnail 1">
+      <img src="./images/jbl660nc-2.png" class="thumbnail-img" alt="Thumbnail 2">
+      <img src="./images/jbl660nc-3.png" class="thumbnail-img" alt="Thumbnail 3">
+      <img src="./images/jbl660nc-4.png" class="thumbnail-img" alt="Thumbnail 4">
+    </div>
+
+    <div class="flex-shrink-0" style="width: 400px;">
+      <img src="./images/jbl660nc-1.png" class="main-image" alt="Main Product Image">
+    </div>
+
+    <div class="flex-grow-1">
+      <h2>JBL Live 660NC</h2>
+      <p >Wireless Over-Ear NC  Headphones</p>
+
+      <div class="rating mb-2">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <span class="ms-2">| 1234 Ratings</span>
+      </div>
+
+      <hr class="border-light" />
+
+      <div class="d-flex align-items-center mb-2 flex-wrap gap-2">
+        <span class="price me-3">₹9,999</span>
+        <span class="old-price me-3">₹14,999</span>
+        <span class="badge badge-stock d-flex align-items-center">
+          <i class="bi bi-check-circle me-1"></i> In Stock
+        </span>
+      </div>
+
+      <p class="save">You save: ₹5,000 (33%)<br><span class="text-muted small">(Inclusive of all taxes)</span></p>
+
+      <hr class="border-light" />
+
+      <p class="mb-2">Offers and Discounts</p>
+      <div class="row mb-4 g-3">
+        <div class="col-md-6">
+          <div class="offers h-100">
+            <p class=" mb-0 small">No Cost EMI On credit</p>
+            <p class="mb-0 small">card</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="offers h-100">
+            <p class=" mb-0  small">Pay Later & Avail</p>
+            <p class="mb-0 small">Cashback</p>
+          </div>
+        </div>
+      </div>
+<hr class="border-light" />
+      
+      <a href="#" class="btn btn-danger btn-cart">Add to Cart</a>
+    </div>
+  </div>
+</div>
+<div class="categories d-flex flex-wrap justify-content-center gap-2 mb-4">
+    <p class="active">Specifications</p>
+    <p>Overview</p>
+    <p>Review</p>
+    </div>
+<div class="container mb-5">
+  <div class="row text-white ">
+    <div class="col-md-6 mb-2"><strong>Brand</strong></div>
+    <div class="col-md-6 mb-2">JBL</div>
+
+    <div class="col-md-6 mb-2"><strong>Model</strong></div>
+    <div class="col-md-6 mb-2">JBL Live 660NC</div>
+
+    <div class="col-md-6 mb-2"><strong>Generic Name</strong></div>
+    <div class="col-md-6 mb-2">Headphones</div>
+
+    <div class="col-md-6 mb-2"><strong>Headphone Type</strong></div>
+    <div class="col-md-6 mb-2">Over-Ear</div>
+
+    <div class="col-md-6 mb-2"><strong>Connectivity</strong></div>
+    <div class="col-md-6 mb-2">Wireless</div>
+
+    <div class="col-md-6 mb-2"><strong>Microphone</strong></div>
+    <div class="col-md-6 mb-2">Yes</div>
+  </div>
+</div>
+<h2 class="text-center my-4 pt-3">Related Products</h2><br>
+<div class="container-card">
+    <div class="row g-4">
+
+      <div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/jbl660nc-1.png" class="card-img-top " alt="JBL Live 660NC" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <h5 class="card-title">JBL Live 660NC</h5>
+            <p class="card-text">Wireless Over-Ear NC<br> Headphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹9,999</span> <del class="text-muted">₹14,999</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/boat518-1.png" class="card-img-top " alt="boat" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <h5 class="card-title">boAtRockerz 518</h5>
+            <p class="card-text">On-Ear Wireless <br>Headphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹1,299</span> <del class="text-muted">₹3,990</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/boat410-1.png" class="card-img-top " alt="boar410" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <h5 class="card-title">boAt Rockerz 410</h5>
+            <p class="card-text">Bluetooth & Wired On-Ear<br> Headphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹1,599</span> <del class="text-muted">₹2,990</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="card h-100">
+          <img src="./images/sonyXb910n-1.png" class="card-img-top" alt="sonyXb910n-1" />
+          <div class="card-body">
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              
+            </div>
+            <h5 class="card-title">Sony WH-XB910N</h5>
+            <p class="card-text">Wireless Over-Ear <br>Headphones</p>
+            <hr />
+            <p><span class="h5 text-white">₹13,489</span> <del class="text-muted">₹19,990</del></p>
+            <a href="#" class="btn btn-danger w-100">Add to cart</a>
+          </div>
+        </div>
+      </div>
+<h2 class="text-center my-5">Our Advantages</h2>
+  <div class="d-flex flex-wrap justify-content-around text-white px-3 advantages">
+    <div class="d-flex adv-item align-items-start mb-3">
+      <i class="bi bi-truck text-danger fs-3"></i>
+      <div>
+        <p class="mb-0">Express Delivery</p>
+        <small class="text-muted">Ship in 24 Hours</small>
+      </div>
+    </div>
+    <div class="d-flex adv-item align-items-start mb-3">
+      <i class="bi bi-shield-check text-danger fs-3"></i>
+      <div>
+        <p class="mb-0">Brand Warranty</p>
+        <small class="text-muted">100% Original Products</small>
+      </div>
+    </div>
+    <div class="d-flex adv-item align-items-start mb-3">
+      <i class="bi bi-tags text-danger fs-3"></i>
+      <div>
+        <p class="mb-0">Exciting Deals</p>
+        <small class="text-muted">On All Prepaid Orders</small>
+      </div>
+    </div>
+    <div class="d-flex adv-item align-items-start mb-3">
+      <i class="bi bi-credit-card text-danger fs-3"></i>
+      <div>
+        <p class="mb-0">Secure Payments</p>
+        <small class="text-muted">SSL / Secure Payments</small>
+      </div>
+    </div>
+  </div>
+  </div>
+<footer class="footer py-5 mt-5">
+  <div class="container text-white ">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5>Tech-Shop</h5>
+        <p class="text-white-75">Subscribe to our Email alerts to receive<br>early discount offers, and new products<br>info.</p>
+        <input type="email" class="form-control mb-2 " placeholder="Email Address*" />
+        <button class="btn btn-danger">Subscribe</button>
+      </div>
+
+      <div class="col-md-2 mb-4">
+        <h5>Help</h5>
+        <ul class="list-unstyled text-white-75">
+          <li>FAQs</li>
+          <li>Track Order</li>
+          <li>Cancel Order</li>
+          <li>Return Order</li>
+          <li>Warranty Info</li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <h5>Policies</h5>
+        <ul class="list-unstyled text-white-75">
+          <li>Return Policy</li>
+          <li>Security</li>
+          <li>Sitemap</li>
+          <li>Privacy Policy</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <h5>Company</h5>
+        <ul class="list-unstyled text-white-75">
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Service Center</li>
+          <li>Careers</li>
+          <li>Affiliates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="container text-white">
+      <div class="d-flex justify-content-between flex-wrap align-items-center">
+        <div class="text-white-50">2025 | All Rights Reserved</div>
+        <div class="d-flex gap-3 mt-3 mt-md-0">
+          <a href="#"><i class="bi bi-facebook fs-4 text-white"></i></a>
+          <a href="#"><i class="bi bi-twitter fs-4 text-white"></i></a>
+          <a href="#"><i class="bi bi-instagram fs-4 text-white"></i></a>
+          <a href="#"><i class="bi bi-linkedin fs-4 text-white"></i></a>
+          <a href="#top"><button class="btn btn-danger btn-sm"><i class="bi bi-chevron-up"></i></button></a>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
